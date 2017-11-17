@@ -1,0 +1,6 @@
+/* navbar styles */
+
+.navbar-buttons li {
+    list-style: none;
+    display: inline-block;
+}
