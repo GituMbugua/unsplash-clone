@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    {% block content %}    
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="{% url 'home' %}" class="navbar-brand"><span class="glyphicon glyphicon-camera"></span></a>
+                </div>
+                <!-- search form -->
+                <div class="col-md-7 col-lg-7 navbar-left">
+                    <form action="" class="navbar-form" role="search">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Search free high-resolution photos" name="photos">
+                        </div>
+                    </form>
+                </div>
+                <!-- end of search form -->
+                <!-- links to other pages -->
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="#">Collections</a></li>
+                        <li><a href="#">Explore</a></li>
+                        <li><a href="#">About</a></li>
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#"><b class="glyphicon glyphicon-option-horizontal"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Wallpapers</a></li>
+                                <li><a href="#">Community</a></li>
+                                <li><a href="#">Store</a></li>
+                                <li><a href="#">Hostory</a></li>
+                                <li><a href="#">Made with Unsplash Clone</a></li>
+                                <li><a href="#">Tag photos</a></li>
+                                <li><a href="#">API/Developers</a></li>
+                                <li><a href="#">License</a></li>
+                                <li><a href="#">Help</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end of links -->
+            </div>
+            <div class="row">
+                <ul class="navbar-buttons">
+                    <li><button class="btn btn-large">Business</button></li>
+                    <li><button class="btn btn-large">Computer</button></li>
+                    <li><button class="btn btn-large">Nature</button></li>
+                    <li><button class="btn btn-large">Love</button></li>
+                    <li><button class="btn btn-large">House</button></li>
+                    <li><button class="btn btn-large">Landscape</button></li>
+                    <li><button class="btn btn-large">Cat</button></li>
+                    <li><button class="btn btn-large">Happy</button></li>
+                    <li><button class="btn btn-large">Health</button></li>
+                    <li><button class="btn btn-large">Autumn</button></li>
+                    <li><button class="btn btn-large">Friends</button></li>
+                    <li><button class="btn btn-large">Office</button></li>
+                </ul>
+        
+            </div>
+        </nav>
+    {% endblock %}
+</body>
+</html>
