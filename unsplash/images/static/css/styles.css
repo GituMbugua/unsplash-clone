@@ -1,6 +1,110 @@
 /* navbar styles */
-
-.navbar-buttons li {
-    list-style: none;
-    display: inline-block;
+.glyphicon-camera {
+    color: black;
+    font-size: 35px;
 }
+.navbar {
+    margin-bottom: 0;
+}
+.navbar-brand {
+    padding-top: 13px;
+}
+.input-group-btn {
+    border: none;
+    
+}
+.col-md-1 {
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+}
+
+.nav-buttons {
+    color: white;
+    text-align: center;
+}
+
+.home-container {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.nav-buttons h5 {
+    padding: 15px;
+    border-radius: 4%;
+
+}
+
+/* tags */
+.business {
+    background: url('/static/img/business.jpg');
+    background-position: center;
+    height: 
+}
+.computer {
+    background: url('/static/img/computer.jpg');
+    background-position: center;
+}
+.nature {
+    background: url('/static/img/nature.jpg');
+    background-position: center;
+}
+.love {
+    background: url('/static/img/love.jpg');
+    background-position: center;
+}
+.house {
+    background: url('/static/img/house.jpg');
+    background-position: center;
+}
+.landscape {
+    background: url('/static/img/landscape.jpg');
+    background-position: center;
+}
+.cat {
+    background: url('/static/img/cat.jpg');
+    background-position: center;
+}
+.happy {
+    background: url('/static/img/happy.jpg') ;
+    background-position: center;
+}
+.health {
+    background: url('/static/img/health.jpg');
+    background-position: center;
+}
+.autumn {
+    background: url('/static/img/autumn.jpg');
+    background-position: center;
+}
+.friends {
+    background: url('/static/img/office.jpg');
+    background-position: center;
+}
+.office {
+    background: url('/static/img/office.jpg');
+    background-position: center;
+}
+
+/* photos */
+.photo-div {
+	-webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+	  
+	
+	}	
+	.photo-div img{ width: 100%; padding: 12px 5px;}
+@media (max-width: 500px) {
+		
+		.photo-div {
+	
+	
+	-webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;
+	  
+	
+	}
+		
+    }
+    /* end of photos */
+
