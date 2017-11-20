@@ -2,11 +2,25 @@
 {% load bootstrap3 %}
 
 {% block content %}
-    <div class="container">
+    <div class="container-fluid home-container">
 
-        <h1>Unsplash Clone</h1>
-        <h3>Beautiful, free photos</h3>
-        <h3>Gifted by the world’s most generous community of photographers.</h3>
+        <div class="home-greeting">
+                <h1>Unsplash Clone</h1>
+                <h3>Beautiful, free photos</h3>
+                <h3>Gifted by the world’s most generous community of photographers.</h3>
+        </div>
+        <div class="photo-div">
 
+            {% for item in images %}
+                <!-- <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 images"> -->
+                    <img src="{{item.photo.url}}" alt="Image" class="img-responsive">
+                <!-- </div> -->
+            {% empty %}            
+                <div class="row">
+                    <h2 class="text-center">There are no images</h2>
+                </div>
+            {% endfor %}
+
+        </div>
     </div>
 {% endblock %}
