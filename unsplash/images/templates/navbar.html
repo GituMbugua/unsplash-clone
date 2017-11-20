@@ -6,7 +6,7 @@
 </head>
 <body>
     {% block content %}    
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-static-top">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a href="{% url 'home' %}" class="navbar-brand"><span class="glyphicon glyphicon-camera"></span></a>
@@ -47,23 +47,6 @@
                     </ul>
                 </div>
                 <!-- end of links -->
-            </div>
-            <div class="row">
-                <ul class="navbar-buttons">
-                    <li><button class="btn btn-large">Business</button></li>
-                    <li><button class="btn btn-large">Computer</button></li>
-                    <li><button class="btn btn-large">Nature</button></li>
-                    <li><button class="btn btn-large">Love</button></li>
-                    <li><button class="btn btn-large">House</button></li>
-                    <li><button class="btn btn-large">Landscape</button></li>
-                    <li><button class="btn btn-large">Cat</button></li>
-                    <li><button class="btn btn-large">Happy</button></li>
-                    <li><button class="btn btn-large">Health</button></li>
-                    <li><button class="btn btn-large">Autumn</button></li>
-                    <li><button class="btn btn-large">Friends</button></li>
-                    <li><button class="btn btn-large">Office</button></li>
-                </ul>
-        
             </div>
         </nav>
     {% endblock %}
