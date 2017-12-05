@@ -3,6 +3,7 @@ from django.db import models
 class User(models.Model):
     first_name = models.CharField(max_length = 30)
     last_name = models.CharField(max_length = 30)
+    username = models.CharField(max_length=30)
     email = models.EmailField()
     phone_number = models.CharField(max_length = 10, blank = True)
 
@@ -25,7 +26,8 @@ class tags(models.Model):
 
 class Image(models.Model):
     photo = models.ImageField(upload_to = 'photos/')
-    author = models.ForeignKey(User)
+    location = models.CharField(max_length=30)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
     tags = models.ManyToManyField(tags)
 
     @classmethod
