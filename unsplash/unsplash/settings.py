@@ -14,7 +14,6 @@ import os
 import dj_database_url
 
 db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -30,6 +29,7 @@ SECRET_KEY = 'f8rz$)g@lomrj@2c2yo=8839h_c)5^@e=6mo!tlxfsjh=d*frg'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
 
 
 # Application definition
@@ -89,7 +89,7 @@ DATABASES = {
         'PASSWORD': 'sqlpass',
     }
 }
-
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
