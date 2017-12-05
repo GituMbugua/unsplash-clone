@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid image-overlay">
+    <div class="panel panel-default image-panel">
+        <div class="panel-heading">
+            <img src="{% static 'img/user.jpg' %}" alt="avatar" class="img-responsive avatar">
+            <span class="user-info">
+                <h4 class="user-name">{{image.author.first_name}} {{image.author.last_name}}</h4>
+                <p>@{{image.author.username}}</p>
+            </span>
+            <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal"><h4>Download free</h4></button>
+        </div>
+        <div class="panel-body">
+            <div class="col-md-12 image-div">
+                <img src="{{image.photo.url}}" alt="Image" class="img-responsive image-detail">
+
+                <span class="glyphicon glyphicon-map-marker"> </span><h5 class="image-location">{{image.location}}</h5>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="modal-body">
+                    <h3>Share</h3>
+                    <h5>Photo by {{image.author}}</h5>
+                    <div class="link-area">
+                        <h4>https://localhost:8000{{image.photo.url}}</h4>
+                    </div>
+                </div>
+            
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

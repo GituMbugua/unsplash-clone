@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.http import Http404
 from .models import Image, tags
 
 def home(request):
@@ -6,12 +7,15 @@ def home(request):
     display all images on home page
     '''
     images = Image.get_images
-    return render(request, 'home.html', {"images":images})
+    all_tags = tags.get_tags()
+    return render(request, 'home.html', {"images":images, "all_tags":all_tags})
 
-def tags(request):
+def image(request, image_id):
     '''
-    display all tags
+    display an image fullscreen
     '''
-    all_tags = tags.get_tags
-    print('all_tags')
-    return render(request, 'nav_buttons.html', {"all_tags":all_tags})
+    try:
+        image = Image.objects.get(id=image_id)
+    except:
+        raise Http404()
+    return render(request, 'image.html', {"image":image})
