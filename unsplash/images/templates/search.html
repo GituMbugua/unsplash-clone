@@ -2,9 +2,9 @@
 {% load bootstrap3 %}
 
 {% block content %}
-    {% if image %}
+    {% if images %}
         {% for image in images %}
-            <div class="image-container">
+            <div class="photo-div">
                 <a href="{% url 'image' image.id %}">
                 <div class="after"></div>
                     <img src="{{image.photo.url}}" alt="Image" class="img-responsive home-image" id="myImg">

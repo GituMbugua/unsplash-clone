@@ -112,60 +112,77 @@
     color: white;
     text-align: center;
 }
-.tags li:nth-of-type(1) {
+.tags a:nth-of-type(1) {
     background: url('/static/img/business.jpg');
+    background-size: 100%;
     background-position: center;
 }
-.tags li:nth-of-type(2) {
+.tags a:nth-of-type(2) {
     background: url('/static/img/computer.jpg');
+    background-size: 100%;
     background-position: center;
 }
-.tags li:nth-of-type(3) {
+.tags a:nth-of-type(3) {
     background: url('/static/img/nature.jpg');
+    background-size: 100%;
     background-position: center;
 }
-.tags li:nth-of-type(4) {
+.tags a:nth-of-type(4) {
     background: url('/static/img/love.jpg');
+    background-size: 100%;
     background-position: center;
 }
-.tags li:nth-of-type(5) {
+.tags a:nth-of-type(5) {
     background: url('/static/img/house.jpg');
+    background-size: 100%;
     background-position: center;
 }
-.tags li:nth-of-type(6) {
+.tags a:nth-of-type(6) {
     background: url('/static/img/landscape.jpg');
+    background-size: 100%;
     background-position: center;
 }
-.tags li:nth-of-type(7) {
+.tags a:nth-of-type(7) {
     background: url('/static/img/cat.jpg');
+    background-size: 100%;
     background-position: center;
 }
-.tags li:nth-of-type(8) {
+.tags a:nth-of-type(8) {
     background: url('/static/img/happy.jpg') ;
+    background-size: 100%;
     background-position: center;
 }
-.tags li:nth-of-type(9) {
+.tags a:nth-of-type(9) {
     background: url('/static/img/health.jpg');
+    background-size: 100%;
     background-position: center;
 }
-.tags li:nth-of-type(10) {
+.tags a:nth-of-type(10) {
     background: url('/static/img/autumn.jpg');
+    background-size: 100%;
     background-position: center;
 }
-.tags li:nth-of-type(11) {
+.tags a:nth-of-type(11) {
     background: url('/static/img/friends.jpg');
+    background-size: 100%;
+    background-position: fill;
+}
+.tags a:nth-of-type(12) {
+    background: url('/static/img/office.jpg');  
+    background-size: 100%;
     background-position: center;
 }
-.tags li:nth-of-type(12) {
-    background: url('/static/img/office.jpg');
-    background-position: center;
-}
+
 .tags {
     padding-left: 0;
 }
-.tags li {
+.tags a {
     margin-left: 0.5%;
     width: 7.8%;
+    color: black;
+}
+.tags a:hover {
+    color: white;
 }
 
 .home-greeting {
@@ -201,6 +218,7 @@
 .photo-div {
     position: relative;
     margin-top: 1%;
+    margin-bottom: 1%;
 	-webkit-column-count: 3; /* Chrome, Safari, Opera */
     -moz-column-count: 3; /* Firefox */
     column-count: 3;
