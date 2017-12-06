@@ -19,10 +19,18 @@ class tags(models.Model):
     def __str__(self):
         return self.name
 
+    def save_tags(self):
+        self.save()
+
     @classmethod
     def get_tags(cls):
         tags = cls.objects.all()
         return tags
+
+    @classmethod
+    def search_by_tags(cls, search_term):
+        tag = cls.objects.filter(name__icontains = search_term)
+        return tag
 
 class Image(models.Model):
     photo = models.ImageField(upload_to = 'photos/')
