@@ -1,9 +1,11 @@
 {% block content %}
     <div class="container-fluid nav-container">
-        <ul class="tags">
+        <div class="tags">
             {% for item in all_tags %}
-                <li class="col-xs-12 col-sm-12 col-md-1 btn btn-large"><h5>{{item.name}}</h5></li>
+                <a href="{% url 'tag_images' item.id %}" class="col-xs-12 col-sm-12 col-md-1 btn btn-large"><h5>{{item.name}}</h5>
+                    <!-- <li </li> -->
+                </a>
             {% endfor %}
-        </ul>
+            </div>
     </div>
 {% endblock%}

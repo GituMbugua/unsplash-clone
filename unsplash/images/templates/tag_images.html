@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+
+{% block content %}
+    {% if images %}
+        {% for image in images %}
+            <div class="photo-div">
+                <a href="{% url 'image' image.id %}">
+                <div class="after"></div>
+                    <img src="{{image.photo.url}}" alt="Image" class="img-responsive home-image" id="myImg">
+                </a>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="row">
+            <h2 class="text-center">There are no images for this tag</h2>
+        </div>
+    {% endif %}
+
+{% endblock %}
