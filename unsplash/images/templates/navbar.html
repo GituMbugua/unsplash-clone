@@ -13,9 +13,9 @@
                 </div>
                 <!-- search form -->
                 <div class="col-md-7 col-lg-8 navbar-left">
-                    <form action="" class="navbar-form" role="search">
+                    <form action="{% url 'search_results' %}" class="navbar-form" role="search">
                         <div class="input-group">
-                            <input type="text" class="form-control search rounded" placeholder="Search free high-resolution photos" name="photos">
+                            <input type="text" class="form-control search rounded" placeholder="Search free high-resolution photos" name="tag">
                             <i class="glyphicon glyphicon-search form-control-feedback"></i>
                         </div>
                     </form>
