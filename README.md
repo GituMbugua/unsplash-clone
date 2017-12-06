@@ -19,9 +19,13 @@ To view the website, you can click on the link in the descrition.
 If you like it and would like to install it, clone it above and follow these instructions:
 
 _Have Python3 installed_
+
 _Have pip installed to the latest version_
+
 `create a virtual environment`
+
 `(venv)$ pip install requirements.txt`
+
 `(venv)$ ./manage.py runserver`
 
 That's it!
